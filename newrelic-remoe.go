@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
-	"github.com/reeve0930/go-remoe"
 	"github.com/newrelic/newrelic-telemetry-sdk-go/telemetry"
+	"github.com/reeve0930/go-remoe"
 	"time"
 
 	"os"
@@ -21,8 +21,8 @@ func main() {
 			Value:     float64(d.MeasuredInstantaneous),
 			Name:      "remoe.MeasuredInstantaneous",
 			Attributes: map[string]interface{}{
-			"modelId": d.ModelID,
-		},
+				"modelId": d.ModelID,
+			},
 		})
 	}
 	hervester.HarvestNow(context.Background())
